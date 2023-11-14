@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dasboard Teknik Sipil</title>
+
+    <!-- Box Icons  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/hal14.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <section class="home">
+        <p class="civitex">Civi<span>Tech</span></p>
+        <div class="hero">
+          <div class="search-box">
+          <div class="row">
+            <input
+              type="text"
+              id="input-box"
+              placeholder="mau cari apa?"
+              autocomplete="off"
+            />
+            <button id="search"><i class="bx bx-search"></i></button>
+          </div>
+          <div class="result-box"></div>
+        </div>
+      </section>
+      <div class="sidebar close">
+        <!-- ========== Logo ============  -->
+        <a href="#" class="logo-box">
+          <img src="img/hero2-img.png" alt="" />
+          <div class="logo-name">CiviTech</div>
+        </a>
+
+        <!-- ========== List ============  -->
+        <ul class="sidebar-list">
+          <!-- -------- Non Dropdown List Item ------- -->
+          <li>
+            <div class="title">
+              <a href="#" class="link">
+                <i class="bx bx-home"></i>
+                <span class="name">Dashboard</span>
+              </a>
+              <!-- <i class='bx bxs-chevron-down'></i> -->
+            </div>
+            <div class="submenu">
+              <a href="#" class="link submenu-title">Dashboard</a>
+              <!-- submenu links here  -->
+            </div>
+          </li>
+
+          <!-- -------- Dropdown List Item ------- -->
+          <li class="dropdown">
+            <div class="title">
+              <a href="#" class="link">
+                <i class="bx bx-collection"></i>
+                <span class="name">Category</span>
+              </a>
+              <i class="bx bxs-chevron-down"></i>
+            </div>
+            <div class="submenu">
+              <a href="#" class="link submenu-title">Category</a>
+              <a href="Halaman3.html" class="link">Analisis Struktur</a>
+              <a href="Halaman11.html" class="link">Mekanika Fluida</a>
+              <a href="#" class="link">Matematika Sipil</a>
+            </div>
+          </li>
+
+          <!-- -------- Dropdown List Item ------- -->
+          <li class="dropdown">
+            <div class="title">
+              <a href="#" class="link">
+                <i class="bx bx-user"></i>
+                <span class="name">Users</span>
+              </a>
+              <i class="bx bxs-chevron-down"></i>
+            </div>
+            <div class="submenu">
+              <a href="#" class="link submenu-title">Posts</a>
+              <a href="#" class="link">User</a>
+              <a href="#" class="link">Login Form</a>
+              <a href="#" class="link">Card Design</a>
+            </div>
+          </li>
+
+          <!-- -------- Non Dropdown List Item ------- -->
+          <!-- <li>
+            <div class="title">
+              <a href="#" class="link">
+                <i class="bx bx-line-chart"></i>
+                <span class="name">Analytics</span>
+              </a> -->
+
+              <!-- <i class='bx bxs-chevron-down'></i> -->
+
+            <!-- </div>
+            <div class="submenu">
+              <a href="#" class="link submenu-title">Analytics</a> -->
+
+              <!-- submenu links here  -->
+<!--               
+            </div>
+          </li> -->
+
+          <!-- -------- Non Dropdown List Item ------- -->
+          <!-- <li>
+            <div class="title">
+              <a href="#" class="link">
+                <i class="bx bx-pie-chart-alt-2"></i>
+                <span class="name">Chart</span>
+              </a> -->
+
+
+              <!-- <i class='bx bxs-chevron-down'></i> -->
+
+
+            <!-- </div>
+            <div class="submenu">
+              <a href="#" class="link submenu-title">Chart</a> -->
+
+
+              <!-- submenu links here  -->
+<!--               
+            </div>
+          </li> -->
+
+          <!-- -------- Dropdown List Item ------- -->
+          <li class="dropdown">
+            <div class="title">
+              <a href="#" class="link">
+                <i class="bx bx-calculator"></i>
+                <span class="name">Kalkulator</span>
+              </a>
+              <i class="bx bxs-chevron-down"></i>
+            </div>
+            <div class="submenu">
+              <a href="#" class="link submenu-title">Kalkulator</a>
+              <a href="#" class="link">UI Face</a>
+              <a href="#" class="link">Pigments</a>
+              <a href="#" class="link">Box Icons</a>
+            </div>
+          </li>
+          <!-- -------- Non Dropdown List Item ------- -->
+          <li>
+            <div class="title">
+              <a href="#" class="link">
+                <i class="bx bx-history"></i>
+                <span class="name">History</span>
+              </a>
+              <!-- <i class='bx bxs-chevron-down'></i> -->
+            </div>
+            <div class="submenu">
+              <a href="#" class="link submenu-title">History</a>
+              <!-- submenu links here  -->
+            </div>
+          </li>
+
+          <!-- -------- Non Dropdown List Item ------- -->
+          <li>
+            <div class="title">
+              <a href="#" class="link">
+                <i class="bx bx-cog"></i>
+                <span class="name">Settings</span>
+              </a>
+              <!-- <i class='bx bxs-chevron-down'></i> -->
+            </div>
+            <div class="submenu">
+              <a href="#" class="link submenu-title">Settings</a>
+              <!-- submenu links here  -->
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="loading__wrapper">
+      <div class="loader--text">Sekedap Nggih...</div>
+      <div class="loader">
+        <span></span>
+      </div>
+    </div>
+    
+    
+    
+    
+    <!-- Link JS -->
+    <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script><script src="js/hal14.js"></script>
+  </body>
+</html>
