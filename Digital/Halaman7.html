@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dasboard Teknik Sipil</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Box Icons  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'>
+
+    <link rel="stylesheet" href="css/bebas.css" />
+  </head>
+
+  <body>
+    <section class="ap">
+    <div class="app">
+
+      <div class="cardList">
+        <button class="cardList__btn btn btn--left">
+          <div class="icon">
+            <svg>
+              <use xlink:href="#arrow-left"></use>
+            </svg>
+          </div>
+        </button>
+    
+        <div class="cards__wrapper">
+          <div class="card current--card">
+            <div class="card__image">
+              <img src="Beban Terpusat.png" alt="" />
+            </div>
+          </div>
+    
+          <div class="card next--card">
+            <div class="card__image">
+              <img src="Mekanika Fluida.png" alt="" />
+            </div>
+          </div>
+    
+          <div class="card previous--card">
+            <div class="card__image">
+              <img src="Math sipil.png" alt="" />
+            </div>
+          </div>
+        </div>
+    
+        <button class="cardList__btn btn btn--right">
+          <div class="icon">
+            <svg>
+              <use xlink:href="#arrow-right"></use>
+            </svg>
+          </div>
+        </button>
+      </div>
+    
+      <div class="infoList">
+        <div class="info__wrapper">
+          <div class="info current--info">
+            <h1 class="text name">Analisis Struktur</h1>
+            <h4 class="text location">Jembatan</h4>
+            <p class="text description">memiliki titik tumpuan beban</p>
+          </div>
+
+          <div class="info next--info">
+            <h1 class="text name">MEKANIKA FLUIDA</h1>
+            <h4 class="text location">Aliran Pipa</h4>
+            <p class="text description">Mengalir beberapa pipa</p>
+          </div>
+    
+          <div class="info previous--info">
+            <h1 class="text name">Tambahan</h1>
+            <h4 class="text location">Bebas</h4>
+            <p class="text description">Let your dreams come true</p>
+          </div>
+        </div>
+      </div>
+    
+    
+      <div class="app__bg">
+        <div class="app__bg__image current--image">
+          <img src="./img/Screenshot (104).png" alt="" />
+        </div>
+        <div class="app__bg__image next--image">
+          <img src="https://w0.peakpx.com/wallpaper/307/324/HD-wallpaper-aerial-of-machu-picchu-peru.jpg" alt="" />
+        </div>
+        <div class="app__bg__image previous--image">
+          <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
+        </div>
+      </div>
+    </div>
+    
+    <div class="loading__wrapper">
+      <div class="loader--text">Sekedap Nggih...</div>
+      <div class="loader">
+        <span></span>
+      </div>
+    </div>
+    
+    
+    <svg class="icons" style="display: none;">
+      <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+        <polyline points='328 112 184 256 328 400'
+               style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+      </symbol>
+      <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+        <polyline points='184 112 328 256 184 400'
+               style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+      </symbol>
+    </svg>
+</section>
+  
+      
+
+      <section class="home">
+        <div class="imge">
+          <p>ANALISIS STRUKTUR KPTS</p>
+          <img src="./img/Screenshot (154).png" alt="">
+        <div class="set">
+        <label for="length1">Panjang Titik A ke Titik S1:</label>
+        <input type="number" id="length1" />
+      </div>
+  
+      <div class="set">
+        <label for="length2">Panjang Titik S1 ke Titik E:</label>
+        <input type="number" id="length2" />
+      </div>
+  
+      <div class="set">
+        <label for="length3">Panjang Titik C ke Titik E:</label>
+        <input type="number" id="length3" />
+      </div>
+  
+      <div class="set">
+        <label for="length4">Panjang Titik E ke Titik S:</label>
+        <input type="number" id="length4" />
+      </div>
+
+      <div class="set">
+        <label for="length5">Panjang Titik S ke Titik F:</label>
+        <input type="number" id="length5" />
+      </div>
+
+      <div class="set">
+        <label for="length6">Panjang Titik D ke Titik F:</label>
+        <input type="number" id="length6" />
+      </div>
+
+      <div class="set">
+        <label for="length7">Panjang Titik F ke Titik S2:</label>
+        <input type="number" id="length7" />
+      </div>
+      <div class="set">
+        <label for="length8">Panjang Titik S1 ke Titik G:</label>
+        <input type="number" id="length8" />
+      </div>
+      <div class="set">
+        <label for="length9">Panjang Titik G ke Titik B:</label>
+        <input type="number" id="length9" />
+      </div>
+  
+      <div class="set">
+        <label for="loadAtoB">Beban Merata dari Titik A ke S1:</label>
+        <input type="number" id="loadAtoB" />
+      </div>
+      <div class="set">
+        <label for="loadEkeF">Beban Merata dari Titik E ke S:</label>
+        <input type="number" id="loadEkeF" />
+      </div>
+      <div class="set">
+        <label for="loadFkeS2">Beban Merata dari Titik F ke S2:</label>
+        <input type="number" id="loadFkeS2" />
+      </div>
+  
+      <div class="set">
+        <label for="load4">Beban Terpusat di Titik G:</label>
+        <input type="number" id="load4" />
+      </div>
+    </div>
+      <button onclick="calculateReactions()">Hitung Reaksi dan Diagram</button>
+  
+      <div id="reactions">
+        <h2>Reaksi:</h2>
+        <p id="reactionRav">Rav:</p>
+        <p id="reactionRSV1">RSV1:</p>
+        <p id="reactionRbv">Rbv:</p>
+        <p id="reactionRSV2">RSV2:</p>
+        <p id="reactionRCV">RCV:</p>
+        <p id="reactionRDV">RDV:</p>
+        <p id="reactionRCH">RCH:</p>
+        <p id="reactionRDH">RDH:</p>
+        <p id="reactionRSV">RSV:</p>
+        <p id="sfd">Sfd:</p>
+        <p id="bmd">Bmd:</p>
+      </div>
+  
+      <div id="diagrams">
+        <h2>Diagram:</h2>
+        <div id="sfdPlot"></div>
+        <div id="bmdPlot"></div>
+      </div>
+
+    </section>
+    <div class="sidebar close">
+      <!-- ========== Logo ============  -->
+      <a href="#" class="logo-box">
+        <img src="img/hero2-img.png" alt="" />
+        <div class="logo-name">Civitech</div>
+      </a>
+
+      <!-- ========== List ============  -->
+      <ul class="sidebar-list">
+        <!-- -------- Non Dropdown List Item ------- -->
+        <li>
+          <div class="title">
+            <a href="Halaman14.html" class="link">
+              <i class="bx bx-home"></i>
+              <span class="name">Dashboard</span>
+            </a>
+            <!-- <i class='bx bxs-chevron-down'></i> -->
+          </div>
+          <div class="submenu">
+            <a href="#" class="link submenu-title">Dashboard</a>
+            <!-- submenu links here  -->
+          </div>
+        </li>
+
+        <!-- -------- Dropdown List Item ------- -->
+        <li class="dropdown">
+          <div class="title">
+            <a href="#" class="link">
+              <i class="bx bx-collection"></i>
+              <span class="name">Category</span>
+            </a>
+            <i class="bx bxs-chevron-down"></i>
+          </div>
+          <div class="submenu">
+            <a href="#" class="link submenu-title">Category</a>
+            <a href="Halaman3.html" class="link">Analisis Struktur</a>
+            <a href="Halaman11.html" class="link">Mekanika Fluida</a>
+            <a href="#" class="link">Matematika Sipil</a>
+          </div>
+        </li>
+
+        <!-- -------- Dropdown List Item ------- -->
+        <li class="dropdown">
+          <div class="title">
+            <a href="#" class="link">
+              <i class="bx bx-user"></i>
+              <span class="name">Users</span>
+            </a>
+            <i class="bx bxs-chevron-down"></i>
+          </div>
+          <div class="submenu">
+            <a href="#" class="link submenu-title">Posts</a>
+            <a href="#" class="link">User</a>
+            <a href="Halaman2.html" class="link">Login Form</a>
+            <a href="index.html" class="link">Card Design</a>
+          </div>
+        </li>
+
+        <!-- -------- Non Dropdown List Item ------- -->
+        <!-- <li>
+          <div class="title">
+            <a href="#" class="link">
+              <i class="bx bx-line-chart"></i>
+              <span class="name">Analytics</span>
+            </a> -->
+            <!-- <i class='bx bxs-chevron-down'></i> -->
+          <!-- </div>
+          <div class="submenu">
+            <a href="#" class="link submenu-title">Analytics</a> -->
+            <!-- submenu links here  -->
+          <!-- </div>
+        </li> -->
+
+        <!-- -------- Non Dropdown List Item ------- -->
+        <!-- <li>
+          <div class="title">
+            <a href="#" class="link">
+              <i class="bx bx-pie-chart-alt-2"></i>
+              <span class="name">Chart</span>
+            </a> -->
+            <!-- <i class='bx bxs-chevron-down'></i> -->
+          <!-- </div>
+          <div class="submenu">
+            <a href="#" class="link submenu-title">Chart</a> -->
+            <!-- submenu links here  -->
+          <!-- </div>
+        </li> -->
+
+        <!-- -------- Dropdown List Item ------- -->
+        <li class="dropdown">
+          <div class="title">
+            <a href="#" class="link">
+              <i class="bx bx-calculator"></i>
+              <span class="name">Kalkulator</span>
+            </a>
+            <i class="bx bxs-chevron-down"></i>
+          </div>
+          <div class="submenu">
+            <a href="#" class="link submenu-title">Kalkulator</a>
+            <a href="#" class="link">UI Face</a>
+            <a href="#" class="link">Pigments</a>
+            <a href="#" class="link">Box Icons</a>
+          </div>
+        </li>
+        <!-- -------- Non Dropdown List Item ------- -->
+        <li>
+          <div class="title">
+            <a href="#" class="link">
+              <i class="bx bx-history"></i>
+              <span class="name">History</span>
+            </a>
+            <!-- <i class='bx bxs-chevron-down'></i> -->
+          </div>
+          <div class="submenu">
+            <a href="#" class="link submenu-title">History</a>
+            <!-- submenu links here  -->
+          </div>
+        </li>
+
+        <!-- -------- Non Dropdown List Item ------- -->
+        <li>
+          <div class="title">
+            <a href="#" class="link">
+              <i class="bx bx-cog"></i>
+              <span class="name">Settings</span>
+            </a>
+            <!-- <i class='bx bxs-chevron-down'></i> -->
+          </div>
+          <div class="submenu">
+            <a href="#" class="link submenu-title">Settings</a>
+            <!-- submenu links here  -->
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Link JS -->
+  <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script><script src="js/hal3.js"></script>
+
+
+    </body>
+    <script>
+  function calculateReactions() {
+  // Mendapatkan nilai panjang dan beban dari input
+  const panjangAS1 = parseFloat(document.getElementById("length1").value);
+  const panjangS1E = parseFloat(document.getElementById("length2").value);
+  const panjangCE = parseFloat(document.getElementById("length3").value);
+  const panjangES = parseFloat(document.getElementById("length4").value);
+  const panjangSF = parseFloat(document.getElementById("length5").value);
+  const panjangDF = parseFloat(document.getElementById("length6").value);
+  const panjangFS2 = parseFloat(document.getElementById("length7").value);
+  const panjangS1G = parseFloat(document.getElementById("length8").value);
+  const panjangGB = parseFloat(document.getElementById("length9").value);
+  const Merata1 = parseFloat(document.getElementById("loadAtoB").value);
+  const Merata2 = parseFloat(document.getElementById("loadEkeF").value);
+  const Merata3 = parseFloat(document.getElementById("loadFkeS2").value);
+  const pusat = parseFloat(document.getElementById("load4").value);
+
+  // (load2to3 *
+  //     length2 *
+  //     ((1 / 2) * length1 * length2 + length3 + length4) +
+  //     load4 * length4) /
+  //   jumlah;
+  // const Rbv = (load4 * (length1 + length2 + length3))(
+  //   (load2to3 * length2 * ((1 / 2) * length2 + length1)) / jumlah
+  // );
+
+  // Menghitung Reaksi Rav dan Rbv
+  
+    const Rav = ((panjangAS1*Merata1)/2) ;
+  const RSV1 =
+    ((panjangAS1*Merata1)/2);
+
+  const Rbv = ((panjangAS1 * panjangCE)/(panjangS1G + panjangGB));
+
+  const RSV2 = (pusat * panjangGB / (panjangS1G + panjangGB));
+
+  const RCV = (((Rav * (panjangES + panjangSF + panjangFS2))+(Merata2 * (panjangES + panjangSF)*panjangSF) - (Merata3 * panjangFS2*(panjangFS2*(1/2)))-(RSV2*panjangFS2)) / (panjangES + panjangSF)); 
+
+  const RDV = (((-RSV2 * (panjangES + panjangSF + panjangFS2))-(Merata2 * (panjangES + panjangSF + panjangFS2)*((panjangES + panjangSF + panjangFS2)/2)) + (RSV1*panjangS1E))/-(panjangES + panjangSF));
+
+  const RCH = ((-RCV * panjangES) + (RSV1 * (panjangSF + panjangFS2)) + (Merata2*panjangSF*(panjangSF/2)))/-panjangCE;
+
+  const RDH = ((RDV * panjangES) - (Merata2 * (panjangSF + panjangFS2) * ((panjangSF + panjangFS2)/2))-(RSV2 *(panjangSF + panjangFS2)))/panjangDF;
+
+  const RSV = ((Merata2 * panjangES *(panjangES/2))-(Merata3 * panjangFS2 * (panjangFS2/2))-(RSV2*panjangFS2)) / panjangES;
+
+  const sfdValue = [
+    Rav,
+    -RSV1,
+    -RSV1+RCV,
+    -RSV1+RCV-(Merata2*(panjangES + panjangSF)),
+    -RSV1+RCV-(Merata2*(panjangES + panjangSF)) + RDV,
+    -RSV1+RCV-(Merata2*(panjangES + panjangSF)) + RDV - (panjangFS2 * Merata3),
+    -RSV1+RCV-(Merata2*(panjangES + panjangSF)) + RDV - (panjangFS2 * Merata3) - pusat,
+    -RSV1+RCV-(Merata2*(panjangES + panjangSF)) + RDV - (panjangFS2 * Merata3) - pusat + Rbv,
+    -RCH,
+    -RDH];
+
+  const Dx0AS1 = (panjangAS1 * Rav)/(Rav + RSV1);
+  const Dx0EF = ((-RSV1+RCV)*(panjangES +panjangSF)/((-RSV1+RCV)*2));
+
+  const bmdValue = [
+    0, (Rav*Dx0AS1)-(Merata1*Dx0AS1*(Dx0AS1/2)), 0, 0,
+    -(panjangCE*RCH), -Rav*(panjangAS1+panjangS1E)+(Merata1*panjangAS1*(panjangAS1/2)),
+    -(panjangCE*RCH) + (-Rav*(panjangAS1+panjangS1E)+(Merata1*panjangAS1*(panjangAS1/2))), 0, 0,
+    -(RDH*panjangCE), (Rbv*(panjangFS2 + panjangS1G + panjangGB))-(pusat*(panjangS1G+ panjangGB))-(Merata3*panjangGB*(panjangGB/2)),
+    -(RDH*panjangCE) + ((Rbv*(panjangFS2 + panjangS1G + panjangGB))-(pusat*(panjangS1G+ panjangGB))-( Merata3 * panjangGB*(panjangGB/2)))];
+
+
+  // Menampilkan hasil reaksi
+  document.getElementById("reactionRav").innerText = `Rav: ${Rav.toFixed(
+    2
+  )} kN`;
+  document.getElementById("reactionRSV1").innerText = `RSV1: ${RSV1.toFixed(
+    2
+  )} kN`;
+  document.getElementById("reactionRbv").innerText = `Rbv: ${Rbv.toFixed(
+    2
+  )} kN`;
+  document.getElementById("reactionRSV2").innerText = `RSV2: ${RSV2.toFixed(
+    2
+  )} kN`;
+  document.getElementById("reactionRCV").innerText = `RCV: ${RCV.toFixed(
+    2
+  )} kN`;
+  document.getElementById("reactionRDV").innerText = `RDV: ${RDV.toFixed(
+    2
+  )} kN`;
+  document.getElementById("reactionRCH").innerText = `RCH: ${RCH.toFixed(
+    2
+  )} kN`;
+  document.getElementById("reactionRDH").innerText = `RDH: ${RDH.toFixed(
+    2
+  )} kN`;
+  document.getElementById("reactionRSV").innerText = `RSV: ${RSV.toFixed(
+    2
+  )} kN`;
+
+  document.getElementById("sfd").textContent = sfdValue;
+  document.getElementById("bmd").textContent = bmdValue;
+
+  // Membuat data untuk SFD dan BMD
+  const xValues = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+  const sfdValues = sfdValue;
+  const bmdValues = bmdValue;
+
+  // Membuat plot SFD
+  const sfdPlot = document.getElementById("sfdPlot");
+  Plotly.newPlot(sfdPlot, [{ x: xValues, y: sfdValues }], {
+    title: "Shear Force Diagram",
+  });
+
+  // Membuat plot BMD
+  const bmdPlot = document.getElementById("bmdPlot");
+  Plotly.newPlot(bmdPlot, [{ x: xValues, y: bmdValues }], {
+    title: "Bending Moment Diagram",
+  });
+}
+console.clear();
+    </script>
+  </body>
+</html>

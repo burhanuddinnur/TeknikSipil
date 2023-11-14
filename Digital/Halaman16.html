@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kalkulator Analisis Struktur</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <h1>Kalkulator Analisis Struktur</h1>
+
+    <h2>Masukkan Data:</h2>
+    <label>Panjang Titik 1 (m):</label>
+    <input type="number" id="length1" step="0.01" /><br />
+
+    <label>Panjang Titik 2 (m):</label>
+    <input type="number" id="length2" step="0.01" /><br />
+
+    <label>Panjang Titik 3 (m):</label>
+    <input type="number" id="length3" step="0.01" /><br />
+
+    <label>Panjang Titik 4 (m):</label>
+    <input type="number" id="length4" step="0.01" /><br />
+
+    <label>Panjang Titik 5 (m):</label>
+    <input type="number" id="length5" step="0.01" /><br />
+
+    <label>Beban di Titik 2 (N):</label>
+    <input type="number" id="load2" /><br />
+
+    <label>Beban di Titik 3 (N):</label>
+    <input type="number" id="load3" /><br />
+
+    <label>Beban di Titik 4 (N):</label>
+    <input type="number" id="load4" /><br />
+
+    <button onclick="calculate()">Hitung</button>
+
+    <h2>Hasil Perhitungan:</h2>
+    <p>Reaksi R<sub>av</sub>: <span id="reactionAv"></span> N</p>
+    <p>Reaksi R<sub>bv</sub>: <span id="reactionBv"></span> N</p>
+
+    <div id="sfdChart"></div>
+    <div id="bmdChart"></div>
+
+    <script>
+      function calculate() {
+        // Ambil panjang dari input
+        var length1 = parseFloat(document.getElementById("length1").value);
+        var length2 = parseFloat(document.getElementById("length2").value);
+        var length3 = parseFloat(document.getElementById("length3").value);
+        var length4 = parseFloat(document.getElementById("length4").value);
+        var length5 = parseFloat(document.getElementById("length5").value);
+
+        // Ambil beban dari input
+        var load2 = parseFloat(document.getElementById("load2").value);
+        var load3 = parseFloat(document.getElementById("load3").value);
+        var load4 = parseFloat(document.getElementById("load4").value);
+
+        // Hitung reaksi R_av dan R_bv
+        var totalLoad = load2 + load3 + load4;
+        var reactionAv = totalLoad / 2;
+        var reactionBv = totalLoad / 2;
+
+        // Tampilkan hasil reaksi
+        document.getElementById("reactionAv").textContent =
+          reactionAv.toFixed(2);
+        document.getElementById("reactionBv").textContent =
+          reactionBv.toFixed(2);
+
+        // Buat data untuk grafik SFD
+        var sfdData = {
+          x: [
+            0,
+            length2,
+            length2,
+            length2 + length3,
+            length2 + length3,
+            length2 + length3 + length4,
+            length2 + length3 + length4,
+            length2 + length3 + length4 + length5,
+          ],
+          y: [
+            reactionAv,
+            reactionAv,
+            reactionAv - load2,
+            reactionAv - load2,
+            reactionAv - load2 - load3,
+            reactionAv - load2 - load3,
+            reactionAv - load2 - load3 - load4,
+            0,
+          ],
+          type: "scatter",
+          mode: "lines",
+          name: "SFD",
+        };
+
+        // Buat data untuk grafik BMD
+        var bmdData = {
+          x: [
+            0,
+            length2,
+            length2 + length3,
+            length2 + length3 + length4,
+            length2 + length3 + length4 + length5,
+          ],
+          y: [
+            0,
+            -load2 * length2,
+            -load2 * length2 - load3 * length3,
+            -load2 * length2 - load3 * length3 - load4 * length4,
+            0,
+          ],
+          type: "scatter",
+          mode: "lines",
+          name: "BMD",
+        };
+
+        // Tampilkan grafik SFD
+        Plotly.newPlot("sfdChart", [sfdData]);
+
+        // Tampilkan grafik BMD
+        Plotly.newPlot("bmdChart", [bmdData]);
+      }
+    </script>
+  </body>
+</html>
