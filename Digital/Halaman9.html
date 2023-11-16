@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dasboard Teknik Sipil</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Box Icons  -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css'>
+
+    <link rel="stylesheet" href="css/hal11.css" />
+  </head>
+
+  <body>
+    <section class="ap">
+    <div class="app">
+
+      <div class="cardList">
+        <button class="cardList__btn btn btn--left">
+          <div class="icon">
+            <svg>
+              <use xlink:href="#arrow-left"></use>
+            </svg>
+          </div>
+        </button>
+    
+        <div class="cards__wrapper">
+          <div class="card current--card">
+            <div class="card__image">
+              <img src="Beban Terpusat.png" alt="" />
+            </div>
+          </div>
+    
+          <div class="card next--card">
+            <div class="card__image">
+              <img src="Mekanika Fluida.png" alt="" />
+            </div>
+          </div>
+    
+          <div class="card previous--card">
+            <div class="card__image">
+              <img src="Math sipil.png" alt="" />
+            </div>
+          </div>
+        </div>
+    
+        <button class="cardList__btn btn btn--right">
+          <div class="icon">
+            <svg>
+              <use xlink:href="#arrow-right"></use>
+            </svg>
+          </div>
+        </button>
+      </div>
+    
+      <div class="infoList">
+        <div class="info__wrapper">
+          <div class="info current--info">
+            <h1 class="text name">Analisis Struktur</h1>
+            <h4 class="text location">Jembatan</h4>
+            <p class="text description">memiliki titik tumpuan beban</p>
+          </div>
+
+          <div class="info next--info">
+            <h1 class="text name">MEKANIKA FLUIDA</h1>
+            <h4 class="text location">Aliran Pipa</h4>
+            <p class="text description">Mengalir beberapa pipa</p>
+          </div>
+    
+          <div class="info previous--info">
+            <h1 class="text name">Matematika</h1>
+            <h4 class="text location">Menghitung</h4>
+            <p class="text description">Let your dreams come true</p>
+          </div>
+        </div>
+      </div>
+    
+    
+      <div class="app__bg">
+        <div class="app__bg__image current--image">
+          <img src="./img/Screenshot (104).png" alt="" />
+        </div>
+        <div class="app__bg__image next--image">
+          <img src="https://w0.peakpx.com/wallpaper/307/324/HD-wallpaper-aerial-of-machu-picchu-peru.jpg" alt="" />
+        </div>
+        <div class="app__bg__image previous--image">
+          <img src="https://source.unsplash.com/m7K4KzL5aQ8" alt="" />
+        </div>
+      </div>
+    </div>
+    
+    <div class="loading__wrapper">
+      <div class="loader--text">Sekedap Nggih...</div>
+      <div class="loader">
+        <span></span>
+      </div>
+    </div>
+    
+    
+    <svg class="icons" style="display: none;">
+      <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+        <polyline points='328 112 184 256 328 400'
+               style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+      </symbol>
+      <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+        <polyline points='184 112 328 256 184 400'
+               style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+      </symbol>
+    </svg>
+
+  </section>
+  <div id="reactions"></div>
+  <h1>Kalkulator Trigonometri</h1>
+  <p>Masukkan sudut (dalam derajat):</p>
+  <input type="number" id="sudut" /><br />
+</div>
+
+<div class="sidebar close">
+  <!-- ========== Logo ============  -->
+  <a href="#" class="logo-box">
+    <img src="img/hero2-img.png" alt="" />
+    <div class="logo-name">Civitech</div>
+  </a>
+
+  <!-- ========== List ============  -->
+  <ul class="sidebar-list">
+    <!-- -------- Non Dropdown List Item ------- -->
+    <li>
+      <div class="title">
+        <a href="Halaman14.html" class="link">
+          <i class="bx bx-home"></i>
+          <span class="name">Dashboard</span>
+        </a>
+        <!-- <i class='bx bxs-chevron-down'></i> -->
+      </div>
+      <div class="submenu">
+        <a href="#" class="link submenu-title">Dashboard</a>
+        <!-- submenu links here  -->
+      </div>
+    </li>
+
+    <!-- -------- Dropdown List Item ------- -->
+    <li class="dropdown">
+      <div class="title">
+        <a href="#" class="link">
+          <i class="bx bx-collection"></i>
+          <span class="name">Category</span>
+        </a>
+        <i class="bx bxs-chevron-down"></i>
+      </div>
+      <div class="submenu">
+        <a href="#" class="link submenu-title">Category</a>
+        <a href="Halaman3.html" class="link">Analisis Struktur</a>
+        <a href="Halaman11.html" class="link">Mekanika Fluida</a>
+        <a href="#" class="link">Matematika Sipil</a>
+      </div>
+    </li>
+
+    <!-- -------- Dropdown List Item ------- -->
+    <li class="dropdown">
+      <div class="title">
+        <a href="#" class="link">
+          <i class="bx bx-user"></i>
+          <span class="name">Users</span>
+        </a>
+        <i class="bx bxs-chevron-down"></i>
+      </div>
+      <div class="submenu">
+        <a href="#" class="link submenu-title">Posts</a>
+        <a href="#" class="link">User</a>
+        <a href="Halaman2.html" class="link">Login Form</a>
+        <a href="index.html" class="link">Card Design</a>
+      </div>
+    </li>
+
+    <!-- -------- Non Dropdown List Item ------- -->
+    <!-- <li>
+      <div class="title">
+        <a href="#" class="link">
+          <i class="bx bx-line-chart"></i>
+          <span class="name">Analytics</span>
+        </a> -->
+        <!-- <i class='bx bxs-chevron-down'></i> -->
+      <!-- </div>
+      <div class="submenu">
+        <a href="#" class="link submenu-title">Analytics</a> -->
+        <!-- submenu links here  -->
+      <!-- </div>
+    </li> -->
+
+    <!-- -------- Non Dropdown List Item ------- -->
+    <!-- <li>
+      <div class="title">
+        <a href="#" class="link">
+          <i class="bx bx-pie-chart-alt-2"></i>
+          <span class="name">Chart</span>
+        </a> -->
+        <!-- <i class='bx bxs-chevron-down'></i> -->
+      <!-- </div>
+      <div class="submenu">
+        <a href="#" class="link submenu-title">Chart</a> -->
+        <!-- submenu links here  -->
+      <!-- </div>
+    </li> -->
+
+    <!-- -------- Dropdown List Item ------- -->
+    <li class="dropdown">
+      <div class="title">
+        <a href="#" class="link">
+          <i class="bx bx-calculator"></i>
+          <span class="name">Kalkulator</span>
+        </a>
+        <i class="bx bxs-chevron-down"></i>
+      </div>
+      <div class="submenu">
+        <a href="#" class="link submenu-title">Kalkulator</a>
+        <a href="#" class="link">UI Face</a>
+        <a href="#" class="link">Pigments</a>
+        <a href="#" class="link">Box Icons</a>
+      </div>
+    </li>
+    <!-- -------- Non Dropdown List Item ------- -->
+    <li>
+      <div class="title">
+        <a href="#" class="link">
+          <i class="bx bx-history"></i>
+          <span class="name">History</span>
+        </a>
+        <!-- <i class='bx bxs-chevron-down'></i> -->
+      </div>
+      <div class="submenu">
+        <a href="#" class="link submenu-title">History</a>
+        <!-- submenu links here  -->
+      </div>
+    </li>
+
+    <!-- -------- Non Dropdown List Item ------- -->
+    <li>
+      <div class="title">
+        <a href="#" class="link">
+          <i class="bx bx-cog"></i>
+          <span class="name">Settings</span>
+        </a>
+        <!-- <i class='bx bxs-chevron-down'></i> -->
+      </div>
+      <div class="submenu">
+        <a href="#" class="link submenu-title">Settings</a>
+        <!-- submenu links here  -->
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+
+<!-- Link JS -->
+<script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script><script src="js/hal3.js"></script>
+  <button onclick="hitungTrigonometri()">Hitung</button>
+
+  <div id="hasil"></div>
+    <script>
+      function hitungTrigonometri() {
+        // Mengambil nilai sudut dari input
+        var sudut = parseFloat(document.getElementById("sudut").value);
+
+        // Menghitung sin, cos, dan tan dari sudut (dalam radian)
+        var sinValue = Math.sin(sudut * (Math.PI / 180));
+        var cosValue = Math.cos(sudut * (Math.PI / 180));
+        var tanValue = Math.tan(sudut * (Math.PI / 180));
+
+        // Menampilkan hasil pada elemen dengan id "hasil"
+        document.getElementById("hasil").innerHTML =
+          "Sin(" +
+          sudut +
+          "°) = " +
+          sinValue.toFixed(2) +
+          "<br>" +
+          "Cos(" +
+          sudut +
+          "°) = " +
+          cosValue.toFixed(2) +
+          "<br>" +
+          "Tan(" +
+          sudut +
+          "°) = " +
+          tanValue.toFixed(2);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Kalkulator Trigonometri</h1>
+    <p>Masukkan sudut (dalam derajat):</p>
+    <input type="number" id="sudut" /><br />
+
+    <button onclick="hitungTrigonometri()">Hitung</button>
+
+    <div id="hasil"></div>
+  </body>
+</html>

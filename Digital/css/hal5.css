@@ -1,0 +1,31 @@
+:root {
+  --primary: #b6895b;
+  --bg: #e8e8e8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+h1 {
+  align-items: center;
+  justify-content: center;
+  color: black;
+  display: flex;
+  min-height: 200px;
+}
